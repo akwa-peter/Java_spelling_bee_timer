@@ -1,0 +1,32 @@
+<build>
+    <plugins>
+        <plugin>
+            <groupId>SpelllingBeeID</groupId>
+            <artifactId>SpellingID</artifactId>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.PKGTimer.Timer</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>SpelllingBeeID</groupId>
+            <artifactId>SpelllingID</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <configuration>
+                <createDependencyReducedPom>false</createDependencyReducedPom>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
